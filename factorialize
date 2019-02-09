@@ -1,0 +1,12 @@
+function factorialize(num) {
+ let counter = 1
+  while (num > 1) { // while number is more than 1, execute the following:
+    counter *= num; // first round counter (1) = counter (1) * num (20), second round counter (20) = counter (20) * num (19) etc.
+    num --; // because num now reduces by 1, this means counter = 1 below previous round (see line above)
+   console.log(counter)
+
+  }
+return counter;
+}
+
+factorialize(20);
