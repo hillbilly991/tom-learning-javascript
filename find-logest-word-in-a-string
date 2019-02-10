@@ -1,0 +1,15 @@
+function findLongestWordLength(str) {
+  let words = str.split(' ') //split the strings into an array
+  let counter = 0 // this will be used to count the number of letters in the longest string
+console.log (words)
+  for (let i = 0; i < words.length; i++) { // loop through the array ([The],[quick]etc.)
+    if (words[i].length > counter){ // if a string is larger than the counter(0 on the first loop because counter is set to 0)), then do the following
+console.log (words) 
+  counter= words[i].length //  store the length of the word into counter. The first execution will be [The] because it's [0] in the array but because it's looking for anything in the array that is larger than counter, when it finds another string in the array that is larger than the string stored in counter, it will replace it
+    }
+  }
+
+  return counter;
+}
+
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
