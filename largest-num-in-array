@@ -1,0 +1,19 @@
+function myFunc(arr) {
+    var resultArray = [];
+    for (var i = 0; i < arr.length; i++) { // loop through the top level of the array
+        var largstNumInEach = arr[i][0]; // assign a variable to the sub arrays. Start at 0 in order to loop through (see next line)
+        for (var j = 0; j < arr[i].length; j++) { // loop through the sub array
+            if(arr[i][j] > largstNumInEach) { // if the number in [i][j] is bigger than the current number stored in largestNumInEach, then largestNumInEach changes (see line below)
+                largstNumInEach = arr[i][j] // see line above
+            }
+        }
+        resultArray[i] = largstNumInEach; //store largstNumInEach into a new array (resultArray)
+   }
+
+   return resultArray;
+}
+
+var list = myFunc([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], 
+[1000, 1001, 857, 1]]);
+
+console.log(list);
